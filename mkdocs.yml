@@ -1,0 +1,6 @@
+site_name: Angus Simple Blog
+
+nav:
+    - Home: index.md
+    - About: about.md
+theme: readthedocs
