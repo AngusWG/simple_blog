@@ -3,3 +3,4 @@
 # installations of a complete environment.
 
 mkdocs
+selenium

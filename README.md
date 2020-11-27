@@ -8,3 +8,8 @@
 > pip install mkdocs
 > mkdocs serve
 > ```
+ 
+> hot to deploy 
+> ```
+> mkdocs gh-deploy
+> ```
