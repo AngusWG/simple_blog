@@ -1,7 +1,7 @@
 site_name: AngusWG Blog
 site_description: AngusWG的博客
 site_author: AngusWG
-site_url:
+site_url: https://anguswg.github.io/simple_blog/
 markdown_extensions:
     - smarty
     - toc:
