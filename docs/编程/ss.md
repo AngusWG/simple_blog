@@ -1,3 +1,5 @@
+# ss  
+
 ### 安装    
 > pip install shadowsocks    
 > cd /etc/    

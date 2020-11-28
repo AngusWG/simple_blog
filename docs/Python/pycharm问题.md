@@ -1,3 +1,5 @@
+# pycharm问题  
+
 按ctrl+V不能贴贴，ctrl+C能复制    
     
 选中文字后按Backspace不是删除，而是选定行往后继续+1    

@@ -1,3 +1,5 @@
+# GBI项目知识点  
+
 gunicorn 为 flask 提供高并发功能。    
 https://www.jianshu.com/p/bf89b761b612    
     

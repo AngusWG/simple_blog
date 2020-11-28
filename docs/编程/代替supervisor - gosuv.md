@@ -1,3 +1,5 @@
+# 代替supervisor - gosuv  
+
 # 项目的部署    
     
 ### 一. 安装gosuv [Git地址](https://github.com/codeskyblue/gosuv)    

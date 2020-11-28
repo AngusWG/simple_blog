@@ -1,3 +1,5 @@
+# 用pycharm装包出现pycharm The repository located at pypi douban com is not a  
+
 #pycharm The repository located at pypi.douban.com is not a trusted or secure    
     
 首先在window的文件夹窗口输入 ： %APPDATA%    

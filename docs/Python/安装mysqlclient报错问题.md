@@ -1,3 +1,5 @@
+# 安装mysqlclient报错问题  
+
 [下载地址](https://github.com/AngusWG/TestProject/tree/master/%E5%B7%A5%E5%85%B7/%E8%A7%A3%E5%86%B3%E5%90%84%E7%A7%8D%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8C%85/mysqlclient%20wheel)    
     
 关键字段 mysqlclient python  Microsoft Visual Studio 14.0\VC\BIN\cl.exe    

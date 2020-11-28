@@ -1,3 +1,5 @@
+# 更优雅的生成requirements.txt  
+
 [文章参考](https://medium.com/python-pandemonium/better-python-dependency-and-package-management-b5d8ea29dff1)    
     
 # [pipreqs](https://github.com/bndr/pipreqs)     

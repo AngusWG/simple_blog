@@ -1,3 +1,5 @@
+# 两台Nginx socketio无法通过  
+
 项目用到了socket io通信 发送信息    
 client和server直连无问题    
 但是走niginx集群就直接报错了    

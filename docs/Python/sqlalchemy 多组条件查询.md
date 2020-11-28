@@ -1,3 +1,5 @@
+# sqlalchemy 多组条件查询  
+
 ## sql 大概是这个样子    
 `select booking_id from booking where concat(num, ',' , name) in ('1,name1', '2,name2', '3,name3')`    
     

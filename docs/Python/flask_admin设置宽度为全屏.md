@@ -1,3 +1,5 @@
+# flask_admin设置宽度为全屏  
+
 ```    
 {% extends 'admin/base.html' %}    
     

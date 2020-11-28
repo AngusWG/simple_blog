@@ -1,3 +1,5 @@
+# flask_schedule logging 多进程 问题  
+
 [logging模块多进程解决方案](https://blog.gdyshi.top/2018/06/27/logging_multiprocess/)    
 [concurrent-log-handler 0.9.12](https://pypi.org/project/concurrent-log-handler/)    
 ### 错误日志    

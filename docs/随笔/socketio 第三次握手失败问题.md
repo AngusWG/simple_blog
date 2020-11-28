@@ -1,3 +1,5 @@
+# socketio 第三次握手失败问题  
+
 https://segmentfault.com/a/1190000012634779    
     
         location /socket.io {    

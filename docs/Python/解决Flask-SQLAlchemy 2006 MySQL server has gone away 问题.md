@@ -1,3 +1,5 @@
+# 解决Flask-SQLAlchemy 2006 MySQL server has gone away 问题  
+
 ###配置信息    
 * python3 3.6    
 * Flask-SQLAlchemy 2.3.2    

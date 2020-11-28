@@ -1,3 +1,5 @@
+# win10自带Ubuntu使用win10的python方式  
+
 * windows cmd 下  找到python 与 pip 文件存放地址    
 ```    
 λ  where.exe python    

@@ -1,3 +1,5 @@
+# python 时间戳问题  
+
 跑程序的时候发现 _id相同冲突    
 程序中  mongo _id的生成有timestamp决定    
 于是测试：    

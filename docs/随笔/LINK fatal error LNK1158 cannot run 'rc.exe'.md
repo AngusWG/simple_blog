@@ -1,3 +1,5 @@
+# LINK fatal error LNK1158 cannot run 'rc.exe'  
+
 [参考 LINK : fatal error LNK1158: cannot run 'rc.exe'](https://blog.csdn.net/yapingxin/article/details/80541537)    
     
 python 编译cython文件的时候    

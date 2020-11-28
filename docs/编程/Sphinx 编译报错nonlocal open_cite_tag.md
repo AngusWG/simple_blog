@@ -1,3 +1,5 @@
+# Sphinx 编译报错nonlocal open_cite_tag  
+
 线上自动编译时出现错误 SyntaxError: invalid syntax    
 谷歌上搜 `nonlocal open_cite_tag` 没有任何相关信息    
 ```    

@@ -1,3 +1,5 @@
+# google.protobuf.Timestamp is not defined  
+
 ### 错误 "google.protobuf.Timestamp" is not defined.    
 ![image.png](..\images\7485616-19dc60bff00343c7.png)    
     

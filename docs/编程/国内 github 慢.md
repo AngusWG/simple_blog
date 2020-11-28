@@ -1,3 +1,5 @@
+# 国内 github 慢  
+
 ### 在hosts文件中加入如下几句即可：    
 - vim /etc/hosts   **linux**    
 - vim  C:\Windows\System32\drivers\etc\hosts  **windows**    

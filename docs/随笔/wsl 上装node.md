@@ -1,3 +1,5 @@
+# wsl 上装node  
+
 安装 Node.js    
 >  curl -L https://git.io/n-install -x 127.0.0.1:9999 | bash    
     

@@ -1,3 +1,5 @@
+# flask_admin csv 导出  中文乱码问题  
+
 相关参考 [python中文写入CSV乱码解决](https://blog.csdn.net/Yeoman92/article/details/71123845)    
 * 原因：csv文件开头缺少BOM_UTF8 字符     
 * 解决：在Response开头加上BOM_UTF8字符    

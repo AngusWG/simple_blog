@@ -1,3 +1,5 @@
+# python prometheus gunicorn 多进程解决方案  
+
 prometheus 监控 ，用gunicorn启动时。多进程内存不互通导致数据有问题。    
     
 # 参考    

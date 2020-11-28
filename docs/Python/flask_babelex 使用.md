@@ -1,3 +1,5 @@
+# flask_babelex 使用  
+
 ```    
 # https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-i18n-and-l10n    
 # 请在rqlicense-server 目录下操作    

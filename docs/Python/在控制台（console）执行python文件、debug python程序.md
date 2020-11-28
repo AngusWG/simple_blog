@@ -1,3 +1,5 @@
+# 在控制台（console）执行python文件、debug python程序  
+
 # 执行    
 在IPython console里先cd到test.py所在的文件夹，再run test.py。注意使用的是命令run 而不是命令python。    
 # debug    
