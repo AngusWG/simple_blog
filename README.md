@@ -3,13 +3,13 @@
 * 因为简书总封我文章，所以将文章搬运的这里
 
 
->  how to run in local
+> how to run in local
 > ```
 > pip install mkdocs
 > mkdocs serve
 > ```
  
-> hot to deploy 
+> how to deploy 
 > ```
 > mkdocs gh-deploy
 > ```
