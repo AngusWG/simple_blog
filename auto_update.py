@@ -71,7 +71,7 @@ def save_images(file_name):
         urllib.request.urlretrieve(src, image_path)
         content = content.replace(img_url, "..\\images\\" + image_name)
     with open(file_name, "w", encoding="utf8")as f:
-        content = "# " + os.path.basename(file_name)[:-3] + "  \n\n" + content
+        # content = "# " + os.path.basename(file_name)[:-3] + "  \n\n" + content
         f.write(content)
 
 
@@ -88,3 +88,4 @@ def main():
 
 
 main()
+driver.close()
