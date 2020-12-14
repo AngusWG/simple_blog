@@ -8,7 +8,7 @@ markdown_extensions:
         permalink: True
     - sane_lists
 
-theme: lux
+theme: flatly
 
 nav:
     - Home: index.md
