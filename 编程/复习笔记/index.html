@@ -41,6 +41,10 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../%E9%9A%8F%E7%AC%94/%E8%BF%9C%E7%A8%8B%E5%B7%A5%E4%BD%9C%E5%88%86%E6%9E%90/" class="dropdown-item">远程工作分析</a>
+</li>
+                                    
+<li>
     <a href="../../%E9%9A%8F%E7%AC%94/git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/" class="dropdown-item">git设置代理</a>
 </li>
                                     
@@ -371,6 +375,11 @@
             </li>
             
             <li class="nav-item" data-level="1"><a href="#_22" class="nav-link">已看过的资料</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_23" class="nav-link">资料大全</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -903,6 +912,18 @@ GET请求的 总请求数量 / 总等待时长 = QPS<br />
 668971.0 / 7273.539398193359 = 91.97324<br />
 大概92，也不知道时多时少<br />
 因为不是纯GET请求，也算数据库写入，所以我觉得也算TPS。</p>
+<h3 id="rabbitmq">RabbitMQ的结构<a class="headerlink" href="#rabbitmq" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Broker：简单来说就是消息队列服务器实体。</li>
+<li>Exchange：消息交换机，它指定消息按什么规则，路由到哪个队列。</li>
+<li>Queue：消息队列载体，每个消息都会被投入到一个或多个队列。</li>
+<li>Binding：绑定，它的作用就是把exchange和queue按照路由规则绑定起来。</li>
+<li>Routing Key：路由关键字，exchange根据这个关键字进行消息投递。</li>
+<li>vhost：虚拟主机，一个broker里可以开设多个vhost，用作不同用户的权限分离。</li>
+<li>producer：消息生产者，就是投递消息的程序。</li>
+<li>consumer：消息消费者，就是接受消息的程序。</li>
+<li>channel：消息通道，在客户端的每个连接里，可建立多个channel，每个channel代表一个会话任务。</li>
+</ul>
 <hr />
 <h1 id="todo_1">Todo<a class="headerlink" href="#todo_1" title="Permanent link">&para;</a></h1>
 <p><code>因为放在Todo list有多端同步问题，数据会消失，所以换成简书记录。</code></p>
@@ -913,7 +934,8 @@ GET请求的 总请求数量 / 总等待时长 = QPS<br />
 https://github.com/hantmac/Python-Interview-Customs-Collection
 https://github.com/jackfrued/Python-Interview-Bible/blob/master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020.md
 https://github.com/resumejob/interview-questions#%E8%85%BE%E8%AE%AF
-https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/03.01.md</p>
+https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/03.01.md
+https://www.cnblogs.com/Leo_wl/p/12076011.html</p>
 <p>https://mp.weixin.qq.com/s/ENWm8W2hBvlw5pBDQTHpfA
 https://my.oschina.net/yzbty32/blog/549305
 https://juejin.cn/post/6844903958624878606</p>
@@ -942,7 +964,9 @@ https://blog.csdn.net/u013129109/article/details/79608384
 https://www.cnblogs.com/nankezhishi/archive/2012/06/09/getandpost.html
 https://www.cnblogs.com/0201zcr/p/5296843.html
 https://segmentfault.com/a/1190000008227211
-https://zhuanlan.zhihu.com/p/34248254</p></div>
+https://zhuanlan.zhihu.com/p/34248254</p>
+<h1 id="_23">资料大全<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h1>
+<p>https://github.com/EbookFoundation/free-programming-books/blob/master/books/free-programming-books-zh.md</p></div>
             </div>
         </div>
 
