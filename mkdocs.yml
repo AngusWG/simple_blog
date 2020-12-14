@@ -13,6 +13,7 @@ theme: lux
 nav:
     - Home: index.md
     - 随笔:
+      - 随笔\远程工作分析.md
       - 随笔\git设置代理.md
       - 随笔\思维产品课.md
       - 随笔\永久关闭WPS热点、云服务.md
