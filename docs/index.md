@@ -23,7 +23,7 @@
 
 ## 相关链接
 
-* [Github](https://github.com/AngusWG)
+* [我的Github](https://github.com/AngusWG)
 * [我的原简书博客地址](https://www.jianshu.com/u/058b9e136f83)
 * [本博客的静态链接地址-方便看源码过来的小伙伴](https://anguswg.github.io/simple_blog/)
 
