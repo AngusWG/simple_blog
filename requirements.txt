@@ -4,3 +4,4 @@
 
 mkdocs
 selenium
+mkdocs-bootswatch
