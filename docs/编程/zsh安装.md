@@ -6,6 +6,10 @@
 ### SH安装脚本     
 `命令不是打错了  相同命令确实需要运行两遍`    
 ```    
+export http_proxy="http://192.168.100.228:9999"
+export https_proxy="http://192.168.100.228:9999"
+
+
 sh -c "$(curl -fsSL  https://github.com/revir/river-zsh-config/raw/master/install.sh)"    
 sh -c "$(curl -fsSL  https://github.com/revir/river-zsh-config/raw/master/install.sh)"    
 source ~/.zshrc    
