@@ -6,13 +6,13 @@
 # @File    : 自动更新.py
 
 import os
-import urllib
 import re
+import urllib
 
 import requests
+import tqdm
 from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
-from tqdm import tqdm
 
 _path = os.path.abspath(__file__)
 _dir_name = os.path.dirname(_path)  # 单个文件 下载驱动
@@ -56,6 +56,8 @@ driver = init_driver()
 
 
 def save_images(file_name):
+    if "好物" not in file_name:
+        return
     with open(file_name, "r", encoding='utf8') as f:
         content = f.read()
 
@@ -70,8 +72,8 @@ def save_images(file_name):
         image_path = os.path.join(path, image_name)
         urllib.request.urlretrieve(src, image_path)
         content = content.replace(img_url, "..\\images\\" + image_name)
+    content = re.sub("[^ ]{2}(\n)", lambda match: match.group().replace("\n", "  \n"), content)
     with open(file_name, "w", encoding="utf8")as f:
-        # content = "# " + os.path.basename(file_name)[:-3] + "  \n\n" + content
         f.write(content)
 
 
@@ -82,7 +84,7 @@ def main():
         r'.\docs\项目',
         r'.\docs\Python',
     ]:
-        for i in os.listdir(_dir):
+        for i in tqdm.tqdm(os.listdir(_dir)):
             file_name = os.path.join(_dir, i)
             save_images(file_name)
 

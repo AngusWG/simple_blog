@@ -3,16 +3,17 @@ site_description: AngusWG的博客
 site_author: AngusWG
 site_url: https://anguswg.github.io/simple_blog/
 markdown_extensions:
-    - smarty
-    - toc:
-        permalink: True
-    - sane_lists
+  - smarty
+  - toc:
+      permalink: True
+  - sane_lists
 
 theme: flatly
 
 nav:
-    - Home: index.md
-    - 随笔:
+  - Home: index.md
+  - 随笔:
+      - 随笔\好物分享.md
       - 随笔\VR游戏感想.md
       - 随笔\远程工作分析.md
       - 随笔\git设置代理.md
@@ -34,12 +35,13 @@ nav:
       - 随笔\pycharm如何同时编辑多行.md
       - 随笔\wsl 上装node.md
       - 随笔\乐理笔记.md
-    - 项目:
+  - 项目:
       - 项目\网易云消息推送歌曲收集.md
       - 项目\编程兴趣小组招人.md
       - 项目\韭菜的股市研究.md
       - 项目\GBI项目知识点.md
-    - 编程:
+  - 编程:
+      - 编程\Vim笔记.md
       - 编程\StarUML破解.md
       - 编程\编程方式.md
       - 编程\关于编程.md
@@ -60,7 +62,7 @@ nav:
       - 编程\调度算法记录.md
       - 编程\windows上的docker.md
       - 编程\复习笔记.md
-    - Python:
+  - Python:
       - Python\用pycharm装包出现pycharm The repository located at pypi douban com is not a.md
       - Python\安装mysqlclient报错问题.md
       - Python\python3 - mysql 数据存储性能测试.md
@@ -80,4 +82,4 @@ nav:
       - Python\flask_admin 主页支持markdown写入.md
       - Python\pip修改为豆瓣源 脚本.md
       - Python\pycharm问题.md
-    - About: about.md
+  - About: about.md
