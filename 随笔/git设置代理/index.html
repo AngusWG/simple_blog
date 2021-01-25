@@ -41,6 +41,10 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../%E5%A5%BD%E7%89%A9%E5%88%86%E4%BA%AB/" class="dropdown-item">好物分享</a>
+</li>
+                                    
+<li>
     <a href="../VR%E6%B8%B8%E6%88%8F%E6%84%9F%E6%83%B3/" class="dropdown-item">VR游戏感想</a>
 </li>
                                     
@@ -149,6 +153,10 @@
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">编程 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../%E7%BC%96%E7%A8%8B/Vim%E7%AC%94%E8%AE%B0/" class="dropdown-item">Vim 笔记</a>
+</li>
                                     
 <li>
     <a href="../../%E7%BC%96%E7%A8%8B/StarUML%E7%A0%B4%E8%A7%A3/" class="dropdown-item">StarUML破解</a>
@@ -353,6 +361,26 @@
             
             <li class="nav-item" data-level="1"><a href="#git" class="nav-link">git设置代理</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#git_1" class="nav-link">git 设置全局代理</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#git_2" class="nav-link">git 删除全局代理</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#git-github" class="nav-link">git 设置只对github的代理</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#git-github_1" class="nav-link">git 删除只对github的代理</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pip" class="nav-link">pip设置豆瓣源</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -362,10 +390,32 @@
 
 <h1 id="git">git设置代理<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
 <p>https://gist.github.com/laispace/666dd7b27e9116faece6    </p>
-<p>git config &ndash;global https.proxy http://127.0.0.1:1080    </p>
-<p>git config &ndash;global https.proxy https://127.0.0.1:1080    </p>
-<p>git config &ndash;global &ndash;unset http.proxy    </p>
-<p>git config &ndash;global &ndash;unset https.proxy    </p>
+<h2 id="git_1">git 设置全局代理<a class="headerlink" href="#git_1" title="Permanent link">&para;</a></h2>
+<pre><code>git config --global https.proxy http://127.0.0.1:1080    
+git config --global https.proxy https://127.0.0.1:1080    
+</code></pre>
+
+<h2 id="git_2">git 删除全局代理<a class="headerlink" href="#git_2" title="Permanent link">&para;</a></h2>
+<pre><code>git config --global --unset http.proxy        
+git config --global --unset https.proxy    
+</code></pre>
+
+<h2 id="git-github">git 设置只对github的代理<a class="headerlink" href="#git-github" title="Permanent link">&para;</a></h2>
+<pre><code>git config --global http.https://github.com.proxy socks5://127.0.0.1:9999
+</code></pre>
+
+<h2 id="git-github_1">git 删除只对github的代理<a class="headerlink" href="#git-github_1" title="Permanent link">&para;</a></h2>
+<pre><code>git config --global --unset http.https://github.com.proxy)
+</code></pre>
+
+<hr />
+<p>在用户目录下 <code>~\.gitconfig</code> 下查看配置</p>
+<hr />
+<h2 id="pip">pip设置豆瓣源<a class="headerlink" href="#pip" title="Permanent link">&para;</a></h2>
+<p>顺便贴一下 </p>
+<pre><code>pip config set global.index-url https://pypi.douban.com/simple
+</code></pre>
+
 <p>npm config delete proxy    </p></div>
             </div>
         </div>

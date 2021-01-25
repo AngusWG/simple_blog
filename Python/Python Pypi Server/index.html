@@ -41,6 +41,10 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../%E9%9A%8F%E7%AC%94/%E5%A5%BD%E7%89%A9%E5%88%86%E4%BA%AB/" class="dropdown-item">好物分享</a>
+</li>
+                                    
+<li>
     <a href="../../%E9%9A%8F%E7%AC%94/VR%E6%B8%B8%E6%88%8F%E6%84%9F%E6%83%B3/" class="dropdown-item">VR游戏感想</a>
 </li>
                                     
@@ -149,6 +153,10 @@
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">编程 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../%E7%BC%96%E7%A8%8B/Vim%E7%AC%94%E8%AE%B0/" class="dropdown-item">Vim 笔记</a>
+</li>
                                     
 <li>
     <a href="../../%E7%BC%96%E7%A8%8B/StarUML%E7%A0%B4%E8%A7%A3/" class="dropdown-item">StarUML破解</a>
@@ -389,10 +397,12 @@
     |    
 
 </code></pre>
+
 <p><code>packagename</code>为你创建的包名称，<code>myxxx.py</code>是你写的python代码，还有添加个<code>__init__.py</code>文件（文件内容可以为空）.  <br />
 现在你可以调用这个包了(引入包的路径)    </p>
 <pre><code>import packagename    
 </code></pre>
+
 <h2 id="2-pypi">2. 符合pypi的格式<a class="headerlink" href="#2-pypi" title="Permanent link">&para;</a></h2>
 <p>将上面的文件的目录结构改成如下格式    </p>
 <pre><code>packagename    
@@ -419,6 +429,7 @@
     |    
 
 </code></pre>
+
 <p>就是将原来的目录深移一层，文件夹的名称一样即可。在第一层目录下创建些特殊文件。  <br />
 <strong><em>Tips</em></strong>    </p>
 <blockquote>
@@ -511,6 +522,7 @@ setup(
 # 以上字段不需要都包含    
 
 </code></pre>
+
 <p>文中的classifiers的内容并不是随便填写的，你需要参照本文参考文档中的PyPI Classifiers来写    </p>
 <h2 id="3distutils">3、开始使用Distutils进行打包<a class="headerlink" href="#3distutils" title="Permanent link">&para;</a></h2>
 <p>为了保证效果，在打包之前我们可以验证setup.py的正确性，执行下面的代码    </p>
@@ -538,6 +550,7 @@ username = &lt;username&gt;
 password = &lt;password&gt;    
 
 </code></pre>
+
 <p>完成后运行：    </p>
 <blockquote>
 <p>python setup.py register sdist upload    </p>

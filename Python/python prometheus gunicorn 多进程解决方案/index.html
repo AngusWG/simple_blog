@@ -41,6 +41,10 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../%E9%9A%8F%E7%AC%94/%E5%A5%BD%E7%89%A9%E5%88%86%E4%BA%AB/" class="dropdown-item">好物分享</a>
+</li>
+                                    
+<li>
     <a href="../../%E9%9A%8F%E7%AC%94/VR%E6%B8%B8%E6%88%8F%E6%84%9F%E6%83%B3/" class="dropdown-item">VR游戏感想</a>
 </li>
                                     
@@ -149,6 +153,10 @@
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">编程 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../%E7%BC%96%E7%A8%8B/Vim%E7%AC%94%E8%AE%B0/" class="dropdown-item">Vim 笔记</a>
+</li>
                                     
 <li>
     <a href="../../%E7%BC%96%E7%A8%8B/StarUML%E7%A0%B4%E8%A7%A3/" class="dropdown-item">StarUML破解</a>
@@ -387,7 +395,7 @@
 <code>vim monitoring.py</code>    </p>
 </li>
 </ul>
-<pre><code class="language-python">#!/usr/bin/python3    
+<pre><code class="python">#!/usr/bin/python3    
 # encoding: utf-8    
 # @Time    : 2019/8/2 16:29    
 # @author  : zza    
@@ -472,6 +480,7 @@ def setup_monitoring(app, app_name=None):
         return Response(data, mimetype=CONTENT_TYPE_LATEST)    
 
 </code></pre>
+
 <ul>
 <li>在你代码中 导入文件并初始化    </li>
 </ul>
@@ -480,14 +489,16 @@ def setup_monitoring(app, app_name=None):
 from persistd.monitoring import setup_monitoring    
 setup_monitoring(app, &quot;app_name&quot;)    
 </code></pre>
+
 <ul>
 <li>设置Gunicom配置文件  <br />
 <code>vim gunicorn.conf.py</code>    </li>
 </ul>
-<pre><code class="language-python3">from prometheus_client import multiprocess    
+<pre><code class="python3">from prometheus_client import multiprocess    
 def child_exit(server, worker):    
     multiprocess.mark_process_dead(worker.pid)    
 </code></pre>
+
 <ul>
 <li>
 <p>启动Gunicom时 增加参数指向配置文件  <br />
@@ -503,6 +514,7 @@ mkdir multiproc-tmp
 export prometheus_multiproc_dir=multiproc-tmp    
 gunicorn -c gunicorn_conf.py -w 4 yourapp:app    
 </code></pre>
+
 <hr />
 <p>附一个 asyncio 的 monitoring.py    </p>
 <pre><code>#!/usr/bin/python3    

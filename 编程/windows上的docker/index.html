@@ -41,6 +41,10 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../%E9%9A%8F%E7%AC%94/%E5%A5%BD%E7%89%A9%E5%88%86%E4%BA%AB/" class="dropdown-item">好物分享</a>
+</li>
+                                    
+<li>
     <a href="../../%E9%9A%8F%E7%AC%94/VR%E6%B8%B8%E6%88%8F%E6%84%9F%E6%83%B3/" class="dropdown-item">VR游戏感想</a>
 </li>
                                     
@@ -149,6 +153,10 @@
                             <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">编程 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Vim%E7%AC%94%E8%AE%B0/" class="dropdown-item">Vim 笔记</a>
+</li>
                                     
 <li>
     <a href="../StarUML%E7%A0%B4%E8%A7%A3/" class="dropdown-item">StarUML破解</a>
@@ -407,6 +415,7 @@ docker rm docker-tutorial
 docker run --name docker-tutorial python:3.8 python -c &quot;import os;print(os.listdir('.'))&quot;  -v $PWD:/usr/src/myapp  -w /usr/src/myapp    
 docker rm docker-tutorial    
 </code></pre>
+
 <blockquote>
 <p>-v $PWD/myapp:/usr/src/myapp: 将主机中当前目录下的 myapp 挂载到容器的 /usr/src/myapp。  <br />
 -w /usr/src/myapp: 指定容器的 /usr/src/myapp 目录为工作目录。    </p>
@@ -423,6 +432,7 @@ docker commit  jupyter-dev jupyter-dev:version1
 docker images    
 docker run -d -p 8888:8888 --restart=always  --name jupyter jupyter-dev:version1 jupyter-notebook --ip='*' --port=8888 --allow-root --no-browser --NotebookApp.token=''    
 </code></pre>
+
 <p><img alt="image.png" src="../../images/7485616-494b1233e42d0103.png" />    </p>
 <p><img alt="image.png" src="../../images/7485616-ef4624f5892a65a0.png" />    </p>
 <blockquote>
@@ -458,6 +468,7 @@ rsync -avz root@192.168.20.65:/root/.minikube/ca.crt /root/.minikube/ca.crt
 rsync -avz root@192.168.20.65:/root/.minikube/profiles/minikube/client.crt /root/.minikube/profiles/minikube/client.crt    
 rsync -avz root@192.168.20.65:/root/.minikube/profiles/minikube/client.key /root/.minikube/profiles/minikube/client.key    
 </code></pre>
+
 <p>然后<code>kubectl get pods</code> 你就会发现都在你本机上看得到了    </p>
 <p>然后就可以获取一个项目的配置文件，然后启动。  <br />
 <code>kubectl get  pods contest-jiantou-64b9cd5597-kvbjp -o yaml</code>    </p>

@@ -41,6 +41,10 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../%E9%9A%8F%E7%AC%94/%E5%A5%BD%E7%89%A9%E5%88%86%E4%BA%AB/" class="dropdown-item">好物分享</a>
+</li>
+                                    
+<li>
     <a href="../../%E9%9A%8F%E7%AC%94/VR%E6%B8%B8%E6%88%8F%E6%84%9F%E6%83%B3/" class="dropdown-item">VR游戏感想</a>
 </li>
                                     
@@ -149,6 +153,10 @@
                             <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">编程 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Vim%E7%AC%94%E8%AE%B0/" class="dropdown-item">Vim 笔记</a>
+</li>
                                     
 <li>
     <a href="../StarUML%E7%A0%B4%E8%A7%A3/" class="dropdown-item">StarUML破解</a>
@@ -393,10 +401,11 @@
 <li>解压    </li>
 <li><a href="https://github.com/fatedier/frp/blob/master/README_zh.md">设置frps.ini</a>，大概设置成这样：    </li>
 </ol>
-<pre><code class="language-ini">[common]    
+<pre><code class="ini">[common]    
 bind_addr = 服务器ip    
 bind_port = 7000    
 </code></pre>
+
 <ol start="4">
 <li><code>nohup ./frps -c ./frps.ini</code> 跑起程序    </li>
 </ol>
@@ -405,7 +414,7 @@ bind_port = 7000
 <li>下载<a href="https://github.com/fatedier/frp/releases">最新版frp程序</a>    </li>
 <li><a href="https://github.com/fatedier/frp/blob/master/README_zh.md">解压frp并设置frpc.ini</a>，大概设置成这样：    </li>
 </ol>
-<pre><code class="language-ini">[common]    
+<pre><code class="ini">[common]    
 server_addr = 服务器ip    
 server_port = 7000    
 
@@ -415,6 +424,7 @@ local_ip = 127.0.0.1
 local_port = 22    
 remote_port = 6000    
 </code></pre>
+
 <h2 id="3-nohup-frpc-c-frpcini">3. <code>nohup ./frpc -c ./frpc.ini</code> 跑起程序<a class="headerlink" href="#3-nohup-frpc-c-frpcini" title="Permanent link">&para;</a></h2>
 <h1 id="_4">验证<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
 <p><code>ssh -oPort=7000 pi@服务端ip</code>，正常的话将以ssh的方式进入树莓派    </p>
@@ -424,10 +434,12 @@ remote_port = 6000
 <p><code>vim /etc/rc.local</code>    </p>
 <pre><code>nohup /home/zza/frp_0.23.1_linux_amd64/frps -c /home/zza/frp_0.23.1_linux_amd64/frps.ini &amp;    
 </code></pre>
+
 <h5 id="_7">客户端<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h5>
 <p><code>vim /etc/rc.local</code>    </p>
 <pre><code>nohup /home/zza/frp_0.23.1_linux_arm/frpc -c  /home/zza/frp_0.23.1_linux_arm/frpc.ini &amp;    
 </code></pre>
+
 <hr />
 <h1 id="systemd-frp">使用 Systemd 实现自动启动 frp<a class="headerlink" href="#systemd-frp" title="Permanent link">&para;</a></h1>
 <p>Systemd,可以保证在树莓派意外重启时,能自动启动 frp 相关服务.这样,我们就不用整天提心吊胆,担心各种意外了.    </p>
@@ -444,7 +456,7 @@ remote_port = 6000
 <code>vim /usr/lib/systemd/system/frps.service</code>    </p>
 </li>
 </ul>
-<pre><code class="language-ini">[Unit]    
+<pre><code class="ini">[Unit]    
 Description=frps    
 After=network.target    
 
@@ -456,6 +468,7 @@ ExecStop=/bin/kill $MAINPID
 [Install]    
 WantedBy=multi-user.target    
 </code></pre>
+
 <ul>
 <li>
 <p>启动 frp 并设置开机启动  <br />
@@ -483,7 +496,7 @@ WantedBy=multi-user.target
 <code>vim /usr/lib/systemd/system/frpc.service</code>    </p>
 </li>
 </ul>
-<pre><code class="language-ini">[Unit]    
+<pre><code class="ini">[Unit]    
 Description=frpc    
 After=network.target    
 
@@ -495,6 +508,7 @@ ExecStop=/bin/kill $MAINPID
 [Install]    
 WantedBy=multi-user.target    
 </code></pre>
+
 <ul>
 <li>
 <p>启动 frp 并设置开机启动  <br />

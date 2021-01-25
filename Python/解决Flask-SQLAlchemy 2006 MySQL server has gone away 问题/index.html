@@ -41,6 +41,10 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../%E9%9A%8F%E7%AC%94/%E5%A5%BD%E7%89%A9%E5%88%86%E4%BA%AB/" class="dropdown-item">好物分享</a>
+</li>
+                                    
+<li>
     <a href="../../%E9%9A%8F%E7%AC%94/VR%E6%B8%B8%E6%88%8F%E6%84%9F%E6%83%B3/" class="dropdown-item">VR游戏感想</a>
 </li>
                                     
@@ -149,6 +153,10 @@
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">编程 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../%E7%BC%96%E7%A8%8B/Vim%E7%AC%94%E8%AE%B0/" class="dropdown-item">Vim 笔记</a>
+</li>
                                     
 <li>
     <a href="../../%E7%BC%96%E7%A8%8B/StarUML%E7%A0%B4%E8%A7%A3/" class="dropdown-item">StarUML破解</a>
@@ -437,6 +445,7 @@ Traceback (most recent call last):
     _mysql.connection.query(self, query)    
 sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (2006, 'MySQL server has gone away') [SQL: 'SELECT token.contract_address AS token_contract_address \nFROM token \nWHERE token.total_supply IS NULL'] (Background on this error at: http://sqlalche.me/e/e3q8)    
 </code></pre>
+
 <hr />
 <h3 id="_3">已使用解决方案<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
@@ -444,7 +453,7 @@ sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (2006, 'My
 <h5 id="rollbacksql">出错后需要rollback，为了后续程序能运行，给每个涉及sql语句的函数用了<strong>装饰器</strong>。<a class="headerlink" href="#rollbacksql" title="Permanent link">&para;</a></h5>
 </li>
 </ul>
-<pre><code class="language-python">def auto_rollback(func):    
+<pre><code class="python">def auto_rollback(func):    
     def wrapper(*args, **kwargs):    
         try:    
             return func(*args, **kwargs)    
@@ -455,46 +464,52 @@ sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (2006, 'My
 
     return wrapper    
 </code></pre>
+
 <p><strong>治标不治本系列</strong>    </p>
 <ul>
 <li>
 <h5 id="sqlalchemy_pool_recycle">把SQLALCHEMY_POOL_RECYCLE设成一个较小的数<a class="headerlink" href="#sqlalchemy_pool_recycle" title="Permanent link">&para;</a></h5>
 </li>
 </ul>
-<pre><code class="language-python">app.config['SQLALCHEMY_POOL_SIZE'] = 128  # 线程池大小    
+<pre><code class="python">app.config['SQLALCHEMY_POOL_SIZE'] = 128  # 线程池大小    
 app.config['SQLALCHEMY_POOL_TIMEOUT'] = 90  # 超时时间    
 app.config['SQLALCHEMY_POOL_RECYCLE'] = 3  # 空闲连接自动回收时间    
 app.config['SQLALCHEMY_MAX_OVERFLOW'] = 128  # 控制在连接池达到最大值后可以创建的连接数。    
 </code></pre>
+
 <ul>
 <li>
 <h5 id="_4">根据错误日志 在需要用数据库的地方先断开连接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
 </li>
 </ul>
-<pre><code class="language-python">db.session.remove()    
+<pre><code class="python">db.session.remove()    
 </code></pre>
+
 <p><strong>失败</strong>  <br />
 * #####将单独的sql语句改成nopool连接方式     </p>
-<pre><code class="language-python">class nullpool_SQLAlchemy(SQLAlchemy):    
+<pre><code class="python">class nullpool_SQLAlchemy(SQLAlchemy):    
     def apply_driver_hacks(self, app, info, options):    
         super(nullpool_SQLAlchemy, self).apply_driver_hacks(app, info, options)    
         from sqlalchemy.pool import NullPool    
         options['poolclass'] = NullPool    
         del options['pool_size']    
 </code></pre>
+
 <p>解决后又会出现    </p>
-<pre><code class="language-python">sqlalchemy.exc.InvalidRequestError: Can't reconnect until invalid transaction is rolled back    
+<pre><code class="python">sqlalchemy.exc.InvalidRequestError: Can't reconnect until invalid transaction is rolled back    
 </code></pre>
+
 <p><strong>失败</strong>    </p>
 <ul>
 <li>
 <h5 id="sqlalchemy">每次访问数据库重新生成sqlalchemy连接 ✔<a class="headerlink" href="#sqlalchemy" title="Permanent link">&para;</a></h5>
 </li>
 </ul>
-<pre><code class="language-python">    from xxx import SQLAlchemy    
+<pre><code class="python">    from xxx import SQLAlchemy    
     from xxx import app    
     db = SQLAlchemy(app)    
 </code></pre>
+
 <p>最粗暴但是最有效的解决方式，这个问题困扰了将近3周，emmm  <br />
 <img alt="image.png" src="../../images/7485616-cf06c2eabe1f8ca0.png" />    </p>
 <hr />

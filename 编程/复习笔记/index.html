@@ -41,6 +41,10 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../%E9%9A%8F%E7%AC%94/%E5%A5%BD%E7%89%A9%E5%88%86%E4%BA%AB/" class="dropdown-item">好物分享</a>
+</li>
+                                    
+<li>
     <a href="../../%E9%9A%8F%E7%AC%94/VR%E6%B8%B8%E6%88%8F%E6%84%9F%E6%83%B3/" class="dropdown-item">VR游戏感想</a>
 </li>
                                     
@@ -149,6 +153,10 @@
                             <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">编程 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Vim%E7%AC%94%E8%AE%B0/" class="dropdown-item">Vim 笔记</a>
+</li>
                                     
 <li>
     <a href="../StarUML%E7%A0%B4%E8%A7%A3/" class="dropdown-item">StarUML破解</a>
@@ -408,7 +416,7 @@
 <li>返回修改之后的类</li>
 </ol>
 <h3 id="_2">类变量和实例变量<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<pre><code class="language-python3">class Person:
+<pre><code class="python3">class Person:
     name=&quot;aaa&quot;
 
 p1=Person()
@@ -418,6 +426,7 @@ print(p1.name)   # bbb
 print(p2.name)   # aaa
 print(Person.name)   # aaa
 </code></pre>
+
 <h3 id="python_1">Python自省<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h3>
 <p>简单一句就是运行时能够获得对象的类型.比如type(),dir(),getattr(),hasattr(),isinstance().</p>
 <h3 id="python_2">Python中单下划线和双下划线<a class="headerlink" href="#python_2" title="Permanent link">&para;</a></h3>
@@ -447,6 +456,7 @@ myiter = iter(myclass)
 print(next(myiter))
 print(next(myiter))
 </code></pre>
+
 <p>生成器：使用了 <code>yield</code> 的函数被称为生成器（<code>generator</code>），简单点理解生成器就是一个迭代器。  </p>
 <h3 id="aop">面向切面编程(AOP)和装饰器<a class="headerlink" href="#aop" title="Permanent link">&para;</a></h3>
 <p>被用于有切面需求的场景:插入日志、性能测试、事务处理等。<br />
@@ -474,6 +484,7 @@ __new__方法会返回一个创建的实例,而__init__什么都不返回.
 
 ps: __metaclass__是创建类时起作用.所以我们可以分别使用__metaclass__,__new__和__init__来分别在类创建,实例创建和实例初始化的时候做一些小手脚.
 </code></pre>
+
 <h3 id="_5">单例模式<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <pre><code>class Singleton(object):
     def __new__(cls, *args, **kw):
@@ -513,6 +524,7 @@ from mysingleton import my_singleton
 
 my_singleton.foo()
 </code></pre>
+
 <ul>
 <li>共享属性逻辑上也是单例模式<br />
 创建实例时把所有实例的__dict__指向同一个字典,这样它们具有相同的属性和方法。</li>
@@ -527,6 +539,7 @@ my_singleton.foo()
 class MyClass2(Borg):
     a = 1
 </code></pre>
+
 <h3 id="python_4">Python中的作用域<a class="headerlink" href="#python_4" title="Permanent link">&para;</a></h3>
 <p>Python 中，一个变量的作用域总是由在代码中被赋值的地方所决定的。<br />
 当 Python 遇到一个变量的话他会按照这样的顺序进行搜索：<br />
@@ -555,6 +568,7 @@ class MyClass2(Borg):
 &gt;&gt;&gt;print b
 &gt;&gt;&gt;[6,7]
 </code></pre>
+
 <ul>
 <li>map</li>
 </ul>
@@ -562,6 +576,7 @@ class MyClass2(Borg):
 &gt;&gt;&gt; list(a)
 [2, 4, 6]
 </code></pre>
+
 <ul>
 <li>reduce</li>
 </ul>
@@ -575,6 +590,7 @@ class MyClass2(Borg):
 6 4
 Out[10]: 24
 </code></pre>
+
 <h3 id="python_6">Python垃圾回收机制<a class="headerlink" href="#python_6" title="Permanent link">&para;</a></h3>
 <p>Python GC主要使用引用计数（reference counting）来跟踪和回收垃圾。
 当一个对象有新的引用时，它的ob_refcnt就会增加，
@@ -665,12 +681,15 @@ Generator 是一个异步实现的生成器 ，是协程 。
 <pre><code>sudo lsof -i:端口号　　　　　　//查找对应的进程号
 sudo kill -9 进程号　　　　　　//杀死对应的进程
 </code></pre>
+
 <h3 id="linux-10-15k">筛选Linux 10-15k 大小的文件<a class="headerlink" href="#linux-10-15k" title="Permanent link">&para;</a></h3>
 <pre><code>find -size +10k -15k
 </code></pre>
+
 <h3 id="_12">怎么查找文件中包含某文字的命令<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <pre><code>grep -rn &quot;phpernote&quot; *  -C 5 
 </code></pre>
+
 <p>-r  是递归查找
 -n  是显示行号
 -C number  匹配的上下文分别显示[number]行</p>
@@ -783,6 +802,7 @@ no-cache代表不缓存过期的资源，缓存会向服务器进行有效处理
 <pre><code>from multiprocessing import Process, Pipe
 Pipe().send(&quot;Hello 11&quot;)
 </code></pre>
+
 <ul>
 <li>命名管道 named pipe</li>
 </ul>
@@ -791,18 +811,21 @@ Pipe().send(&quot;Hello 11&quot;)
 fd = os.open('pipetest',os.O_NONBLOCK | os.O_CREAT | os.O_RDWR)
 os.write(fd,&quot;hello&quot;)
 </code></pre>
+
 <ul>
 <li>信号（Signal）</li>
 </ul>
 <pre><code>import signal
 signal.signal(signal.SIGTERM,lambda a,b;print(a,b))
 </code></pre>
+
 <ul>
 <li>消息（Message）队列</li>
 </ul>
 <pre><code>import Queue
 Queue.Queue().put
 </code></pre>
+
 <ul>
 <li>共享内存 / 内存映射（mapped memory）</li>
 </ul>
@@ -811,6 +834,7 @@ with contextlib.closing(mmap.mmap(-1, 100, tagname='SASU', access=mmap.ACCESS_WR
     m.write()
     m.flush()
 </code></pre>
+
 <ul>
 <li>信号量（semaphore）</li>
 </ul>
@@ -827,11 +851,13 @@ sem.get_value() 获取信号量值
 sem.acquire() 将信号量减1  当信号量为0时会阻塞
 sem.release() 将信号量加1
 </code></pre>
+
 <ul>
 <li>套接口（Socket）</li>
 </ul>
 <pre><code>import socket 
 </code></pre>
+
 <h3 id="httptcp">http和tcp的区别<a class="headerlink" href="#httptcp" title="Permanent link">&para;</a></h3>
 <p>HTTP在应用层，TCP 和 UDP 都位于计算机网络模型中的运输层。
 HTTP 中包括许多方法，Get ，Post 等。</p>
@@ -841,6 +867,7 @@ HTTP 中包括许多方法，Get ，Post 等。</p>
 for(i=0;i&lt;n:i*2)
   a++
 </code></pre>
+
 <h3 id="_21">解决服务性能瓶颈<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
 <ol>
 <li>增加worker</li>
@@ -928,6 +955,16 @@ GET请求的 总请求数量 / 总等待时长 = QPS<br />
 <li>consumer：消息消费者，就是接受消息的程序。</li>
 <li>channel：消息通道，在客户端的每个连接里，可建立多个channel，每个channel代表一个会话任务。</li>
 </ul>
+<h3 id="wwwbaiducom">电脑上打开浏览器，输入 www.baidu.com，回车，到百度页面出现。中间发生了什么？<a class="headerlink" href="#wwwbaiducom" title="Permanent link">&para;</a></h3>
+<p>简单版本
+* DNS解析域名到ip地址
+* 浏览器发送请求
+* 服务器接受到请求进行处理
+* 服务器返回响应
+* 浏览器针对响应进行解码，获取到html
+* 浏览器渲染html、构建dom节点、加载css、运行脚本</p>
+<p>这道题拓展性极高：
+https://www.zhihu.com/question/437193010/answer/1653724247</p>
 <hr />
 <h1 id="todo_1">Todo<a class="headerlink" href="#todo_1" title="Permanent link">&para;</a></h1>
 <p><code>因为放在Todo list有多端同步问题，数据会消失，所以换成简书记录。</code></p>

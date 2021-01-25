@@ -41,6 +41,10 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
+    <a href="../../%E9%9A%8F%E7%AC%94/%E5%A5%BD%E7%89%A9%E5%88%86%E4%BA%AB/" class="dropdown-item">好物分享</a>
+</li>
+                                    
+<li>
     <a href="../../%E9%9A%8F%E7%AC%94/VR%E6%B8%B8%E6%88%8F%E6%84%9F%E6%83%B3/" class="dropdown-item">VR游戏感想</a>
 </li>
                                     
@@ -149,6 +153,10 @@
                             <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">编程 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Vim%E7%AC%94%E8%AE%B0/" class="dropdown-item">Vim 笔记</a>
+</li>
                                     
 <li>
     <a href="../StarUML%E7%A0%B4%E8%A7%A3/" class="dropdown-item">StarUML破解</a>
@@ -384,7 +392,7 @@
 <ul>
 <li>vim /lib/systemd/system/gosuv.service    </li>
 </ul>
-<pre><code class="language-systemd">[Unit]    
+<pre><code class="systemd">[Unit]    
 Description=gosuv    
 After=syslog.target    
 After=network.target    
@@ -416,6 +424,7 @@ NoNewPrivileges=true
 WantedBy=multi-user.target    
 
 </code></pre>
+
 <h6 id="2-libsystemdsystem">2. 将此文件放到 <code>/lib/systemd/system</code>文件夹下,此时就能够让服务开机启动和自动重启了<a class="headerlink" href="#2-libsystemdsystem" title="Permanent link">&para;</a></h6>
 <ul>
 <li>开机启动: <code>systemctl enable gosuv</code>    </li>
