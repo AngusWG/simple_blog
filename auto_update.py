@@ -41,9 +41,13 @@ def init_driver():
 
     option = webdriver.ChromeOptions()
     option.add_argument("--user-data-dir={}".format(user_cookies))  # 设置成用户自己的数据目录
-
+    option.add_argument('--no-sandbox')
+    # option.add_argument('--headless')
+    option.add_argument('--disable-dev-shm-usage')
+    option.add_experimental_option("excludeSwitches", ["enable-automation"])
+    option.add_experimental_option('useAutomationExtension', False)
     try:
-        driver = webdriver.Chrome(_file_path, options=option)
+        driver = webdriver.Chrome(r"C:\Users\links\Desktop\chromedriver.exe", options=option)
         driver.implicitly_wait(5)
         return driver
     except WebDriverException as err:
