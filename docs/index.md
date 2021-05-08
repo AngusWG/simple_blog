@@ -1,36 +1,10 @@
-# 欢迎来到AngusWG(zza)的小站
+# [博客新地址](https://anguswg.github.io/AngusWG/)
 
-慢慢发现很多东西存在脑子里不靠谱，
-像内存一样，断个电就没了，
-所以啥屁事都会写点东西出来，
-哪怕以后忘了，也至少有文档证明自己弄过。
+mkdoc 每次更新要手动更新目录，
 
-* 发现总会写出点错别字啥的，希望大家见谅，细心的读者一定能找到联系作者的方式~
+所以改用vuepress构建博客
 
----
+同时也改了项目地址到用户同名项目下 可以有个github首页展示
 
-## 最近更新的帖子
-
-* [pythoner使用规范](.\编程\pythoner使用规范.md)
-* [好物分享](.\随笔\好物分享.md)
-* [VR游戏感想](.\随笔\VR游戏感想.md)
-* [关于远程工作](.\随笔\远程工作分析.md)
-* [韭菜的股市研究](.\项目\韭菜的股市研究.md)
-* [复习笔记](.\编程\复习笔记.md)
-* [windows上的docker](.\编程\windows上的docker.md)
-* [如何愉快的魂穿到公司——内网连接指南](随笔\如何愉快的魂穿到公司——内网连接指南.md)
-
----
-
-
-## 相关链接
-
-* [我的Github](https://github.com/AngusWG)
-* [我的原简书博客地址](https://www.jianshu.com/u/058b9e136f83)
-* [本博客的静态链接地址-方便看源码过来的小伙伴](https://anguswg.github.io/simple_blog/)
-
-![](images\7485616-eefd1a0ed5fef397.png)
-
----
-
+[博客新地址 https://anguswg.github.io/AngusWG/](https://anguswg.github.io/AngusWG/)
 
